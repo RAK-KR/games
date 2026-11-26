@@ -1,54 +1,55 @@
-// 카드 그리기와 태그 필터 — 평소에는 건드릴 필요 없습니다.
+// 카드 그리기 — 평소에는 건드릴 필요 없습니다.
 (function () {
   const grid = document.getElementById("grid");
-  const filters = document.getElementById("filters");
-  let current = "전체";
 
-  const allTags = ["전체"];
-  GAMES.forEach(g => g.tags.forEach(t => { if (!allTags.includes(t)) allTags.push(t); }));
+  GAMES.forEach(g => {
+    const a = document.createElement("a");
+    a.className = "card";
+    a.href = g.url;
+    a.style.setProperty("--c", g.color || "#888");
 
-  function renderFilters() {
-    filters.innerHTML = "";
-    allTags.forEach(tag => {
-      const b = document.createElement("button");
-      b.textContent = tag;
-      b.className = "chip" + (tag === current ? " on" : "");
-      b.onclick = () => { current = tag; renderFilters(); renderGrid(); };
-      filters.appendChild(b);
+    // 화면 사진 (없으면 제목 글자로 대신 채움)
+    const thumb = document.createElement("div");
+    thumb.className = "thumb";
+    if (g.image) {
+      const img = document.createElement("img");
+      img.src = g.image;
+      img.alt = g.title + " 화면";
+      img.loading = "lazy";
+      img.onerror = () => { img.remove(); thumb.classList.add("empty"); thumb.textContent = g.title; };
+      thumb.appendChild(img);
+    } else {
+      thumb.classList.add("empty");
+      thumb.textContent = g.title;
+    }
+
+    const body = document.createElement("div");
+    body.className = "body";
+
+    const h = document.createElement("h2");
+    h.textContent = g.title;
+
+    const p = document.createElement("p");
+    p.textContent = g.desc;
+
+    const row = document.createElement("div");
+    row.className = "row";
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    g.tags.forEach(t => {
+      const s = document.createElement("span");
+      s.textContent = t;
+      tags.appendChild(s);
     });
-  }
 
-  function renderGrid() {
-    grid.innerHTML = "";
-    GAMES.filter(g => current === "전체" || g.tags.includes(current)).forEach(g => {
-      const a = document.createElement("a");
-      a.className = "card";
-      a.href = g.url;
-      a.style.setProperty("--c", g.color || "#888");
+    const play = document.createElement("div");
+    play.className = "play";
+    play.textContent = "PLAY ▶";
 
-      const h = document.createElement("h2");
-      h.textContent = g.title;
-
-      const p = document.createElement("p");
-      p.textContent = g.desc;
-
-      const tags = document.createElement("div");
-      tags.className = "tags";
-      g.tags.forEach(t => {
-        const s = document.createElement("span");
-        s.textContent = t;
-        tags.appendChild(s);
-      });
-
-      const play = document.createElement("div");
-      play.className = "play";
-      play.textContent = "PLAY ▶";
-
-      a.append(h, p, tags, play);
-      grid.appendChild(a);
-    });
-  }
-
-  renderFilters();
-  renderGrid();
+    row.append(tags, play);
+    body.append(h, p, row);
+    a.append(thumb, body);
+    grid.appendChild(a);
+  });
 })();
