@@ -76,4 +76,20 @@ const GAMES = [
   //   tags: ["2D", "플랫포머", "싱글"],
   //   color: "#a1a1aa"
   // }
+
+  {
+    title: "KICKBACK",
+    url: "https://rak-kr.github.io/KICBACK/",
+    desc: "총 반동으로만 올라가는 등반 게임",
+    tags: ["2D", "플랫포머", "싱글"],
+    color: "#a1a1aa"
+  // }
+
+  {
+    title: "KICKBACK",
+    url: "https://rak-kr.github.io/KICBACK/",
+    desc: "총 반동으로만 올라가는 등반 게임",
+    tags: ["2D", "플랫포머", "싱글"],
+    color: "Grean"
+  // }
 ];
