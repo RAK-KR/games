@@ -54,14 +54,6 @@ const GAMES = [
     color: "#46a758"
   },
   {
-    title: "한탕",
-    url: "https://rak-kr.github.io/hantang/",
-    image: "img/hantang.jpg",
-    desc: "잠입하다 들키면 총격전이 되는 레트로 1인칭 강도 게임",
-    tags: ["3D", "잠입", "멀티"],
-    color: "#ffc53d"
-  },
-  {
     title: "BACKBLAST",
     url: "https://rak-kr.github.io/backblast/",
     image: "img/backblast.jpg",
