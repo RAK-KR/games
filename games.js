@@ -102,11 +102,11 @@ const GAMES = [
     color: "#12a594"
   },
   {
-    title: "fist-and-steel",
+    title: "FIST & STEEL",
     url: "https://rak-kr.github.io/fist-and-steel/",
-    image: "img/last-key.jpg",
+    image: "img/fist-and-steel.jpg",
     desc: "간단하게 만들어본 격투 게임",
     tags: ["2D", "격투", "싱글"],
-    color: "#12a594"
+    color: "#e5484d"
   }
 ];
