@@ -54,11 +54,39 @@ const GAMES = [
     color: "#ffc53d"
   },
   {
+    title: "BACKBLAST",
+    url: "https://rak-kr.github.io/backblast/",
+    desc: "총 반동으로만 움직이며 보스 셋을 차례로 잡는 횡스크롤 보스전",
+    tags: ["2D", "보스전", "싱글"],
+    color: "#e54666"
+  },
+  {
+    title: "KICKBACK",
+    url: "https://rak-kr.github.io/KICKBACK/",
+    desc: "총 반동만으로 위로 올라가는 등반 게임",
+    tags: ["2D", "플랫포머", "싱글"],
+    color: "#a1a1aa"
+  },
+  {
+    title: "ABYSS",
+    url: "https://rak-kr.github.io/abyss/",
+    desc: "깊은 바닷속을 내려가는 한 판짜리 3D 심해 탐사",
+    tags: ["3D", "탐험", "싱글"],
+    color: "#0090ff"
+  },
+  {
     title: "빛나 사진관",
     url: "https://rak-kr.github.io/best-seat/",
     desc: "한 동네를 배경으로 한 5편 연작 1인칭 방탈출",
     tags: ["3D", "방탈출", "싱글"],
     color: "#d6409f"
+  },
+  {
+    title: "회신",
+    url: "https://rak-kr.github.io/reply/",
+    desc: "어려운 난이도의 5편 연작 1인칭 방탈출 (헤드폰 권장)",
+    tags: ["3D", "방탈출", "싱글"],
+    color: "#7c8a9a"
   },
   {
     title: "THE LAST KEY",
@@ -67,29 +95,4 @@ const GAMES = [
     tags: ["2D", "퍼즐", "싱글"],
     color: "#12a594"
   }
-
-  // 예시) KICKBACK, BACKBLAST 등은 주소 확인 후 아래처럼 추가
-  // ,{
-  //   title: "KICKBACK",
-  //   url: "https://rak-kr.github.io/저장소이름/",
-  //   desc: "총 반동으로만 올라가는 등반 게임",
-  //   tags: ["2D", "플랫포머", "싱글"],
-  //   color: "#a1a1aa"
-  // }
-
-  {
-    title: "KICKBACK",
-    url: "https://rak-kr.github.io/KICBACK/",
-    desc: "총 반동으로만 올라가는 등반 게임",
-    tags: ["2D", "플랫포머", "싱글"],
-    color: "#a1a1aa"
-  // }
-
-  {
-    title: "KICKBACK",
-    url: "https://rak-kr.github.io/KICBACK/",
-    desc: "총 반동으로만 올라가는 등반 게임",
-    tags: ["2D", "플랫포머", "싱글"],
-    color: "Grean"
-  // }
 ];
