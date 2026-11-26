@@ -100,7 +100,7 @@ const GAMES = [
     desc: "한 번 쓴 키는 영영 사라지는 키보드 퍼즐 플랫포머",
     tags: ["2D", "퍼즐", "싱글"],
     color: "#12a594"
-  }
+  },
   {
     title: "fist-and-steel",
     url: "https://rak-kr.github.io/fist-and-steel/",
